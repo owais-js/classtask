@@ -1,0 +1,21 @@
+let users = [
+  { id: 1, name: 'Alice', roleId: 1 },
+  { id: 2, name: 'Bob', roleId: 2 },
+  { id: 3, name: 'Charlie', roleId: 1 }
+];
+
+let roles = [
+  { id: 1, name: 'Admin' },
+  { id: 2, name: 'User' }
+];
+
+for (var i=0; i<users.length; i++) {
+  for (var j=0; j<roles.length; j++) {
+    if (users[i].roleId === roles[j].id) {
+      users[i].roleName = roles[j].name;
+      break; 
+    }
+  }
+}
+
+console.log(users);
